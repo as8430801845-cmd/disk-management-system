@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disk Tool</title>
+    <script src="/static/script.js"></script>
+</head>
+<body onload="loadStatus()">
+    <h2>Simulated Disk Management Tool</h2>
+
+    <label>Filename:</label>
+    <input id="filename" type="text" />
+    <label>Size:</label>
+    <input id="filesize" type="number" />
+    <label>Allocation:</label>
+    <select id="allocationType">
+        <option value="contiguous">Contiguous</option>
+        <option value="linked">Linked</option>
+    </select>
+    <button onclick="createFile()">Create File</button>
+    <button onclick="deleteFile()">Delete File</button>
+
+    <h3>Disk Status:</h3>
+    <div id="diskStatus"></div>
+
+    <h3>Files:</h3>
+    <pre id="fileStatus"></pre>
+</body>
+</html>
